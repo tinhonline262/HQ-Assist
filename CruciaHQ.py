@@ -16,9 +16,9 @@ DEheaders = {'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1
 UKheaders = {'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwMTg4NzQ5LCJ1c2VybmFtZSI6IkRhYmJpbk9uQm90cyIsImF2YXRhclVybCI6InMzOi8vaHlwZXNwYWNlLXF1aXovZGVmYXVsdF9hdmF0YXJzL1VudGl0bGVkLTFfMDAwM19yZWQucG5nIiwidG9rZW4iOiJ5Smk1eXUiLCJyb2xlcyI6W10sImNsaWVudCI6IiIsImd1ZXN0SWQiOm51bGwsInYiOjEsImlhdCI6MTUzMDkwMjk2NiwiZXhwIjoxNTM4Njc4OTY2LCJpc3MiOiJoeXBlcXVpei8xIn0.X0SsaLWpxdKUvA3f6nREFR8uQvcKB23eFktyAu9ItzM'}
 
 try: #error handling
-@bot.event
-async def on_ready():
-    await bot.change_presence(game=discord.Game(name="!help"), status=discord.Status("dnd")) 
+    @bot.event
+    async def on_ready():
+     await bot.change_presence(game=discord.Game(name="!help"), status=discord.Status("dnd")) 
 
 
 
