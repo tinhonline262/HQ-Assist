@@ -15,6 +15,7 @@ USheaders = {'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2
 DEheaders = {'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIyMDIyMzc1LCJ1c2VybmFtZSI6IlBlYW51dHNTdWNrIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9kMnh1MWhkb21oM25yeC5jbG91ZGZyb250Lm5ldC9kZWZhdWx0X2F2YXRhcnMvVW50aXRsZWQtMV8wMDAxX2JsdWUucG5nIiwidG9rZW4iOiJ5cG1OM0YiLCJyb2xlcyI6W10sImNsaWVudCI6IkFuZHJvaWQvMS4xNS4wIiwiZ3Vlc3RJZCI6bnVsbCwidiI6MSwiaWF0IjoxNTMyNTM0OTc3LCJleHAiOjE1NDAzMTA5NzcsImlzcyI6Imh5cGVxdWl6LzEifQ.vazE_ETZb2EtCB6VQlp940uh6CfWhSjopHE01Irh_6k'}
 UKheaders = {'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwMTg4NzQ5LCJ1c2VybmFtZSI6IkRhYmJpbk9uQm90cyIsImF2YXRhclVybCI6InMzOi8vaHlwZXNwYWNlLXF1aXovZGVmYXVsdF9hdmF0YXJzL1VudGl0bGVkLTFfMDAwM19yZWQucG5nIiwidG9rZW4iOiJ5Smk1eXUiLCJyb2xlcyI6W10sImNsaWVudCI6IiIsImd1ZXN0SWQiOm51bGwsInYiOjEsImlhdCI6MTUzMDkwMjk2NiwiZXhwIjoxNTM4Njc4OTY2LCJpc3MiOiJoeXBlcXVpei8xIn0.X0SsaLWpxdKUvA3f6nREFR8uQvcKB23eFktyAu9ItzM'}
 
+try: #error handling
 @bot.event
 async def on_ready():
     await bot.change_presence(game=discord.Game(name="!help"), status=discord.Status("dnd")) 
@@ -337,3 +338,6 @@ async def nextshow(ctx):
 bot.loop.create_task(list_servers())
 
 bot.run("NDczMDI4MDAyNjI0NTY5MzQ0.Dj861A.qZGjZinhZOwo4xfnNHH4B1iiFyI")
+
+except:
+    pass
