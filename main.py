@@ -10,10 +10,10 @@ import asyncio
 from discord import Game
 
 bot = commands.Bot(command_prefix='!')
-headers = {'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIyMDYyNDQ3LCJ1c2VybmFtZSI6Ik9vZmllQVUiLCJhdmF0YXJVcmwiOiJodHRwczovL2QyeHUxaGRvbWgzbnJ4LmNsb3VkZnJvbnQubmV0L2RlZmF1bHRfYXZhdGFycy9VbnRpdGxlZC0xXzAwMDRfZ29sZC5wbmciLCJ0b2tlbiI6IkJwTmlMeSIsInJvbGVzIjpbXSwiY2xpZW50IjoiQW5kcm9pZC8xLjE1LjAiLCJndWVzdElkIjpudWxsLCJ2IjoxLCJpYXQiOjE1MzI2Nzg1MDksImV4cCI6MTU0MDQ1NDUwOSwiaXNzIjoiaHlwZXF1aXovMSJ9.gam_46asERQdW9oLyB92Xi874opyR1vDtLNFVt6Hlk0'}
-USheaders = {'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwMTMzNDI0LCJ1c2VybmFtZSI6IlRoZUxlZ2VuZDQyMDY5IiwiYXZhdGFyVXJsIjoiczM6Ly9oeXBlc3BhY2UtcXVpei9kZWZhdWx0X2F2YXRhcnMvVW50aXRsZWQtMV8wMDAwX2dyZWVuLnBuZyIsInRva2VuIjoiSE45T0JVIiwicm9sZXMiOltdLCJjbGllbnQiOiIiLCJndWVzdElkIjpudWxsLCJ2IjoxLCJpYXQiOjE1MzA4MjE3MjMsImV4cCI6MTUzODU5NzcyMywiaXNzIjoiaHlwZXF1aXovMSJ9.oXkMuNtadyVWRbZSF5nXb1993MwbmUF_Q88Qm3suiP0'}
-DEheaders = {'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIyMDIyMzc1LCJ1c2VybmFtZSI6IlBlYW51dHNTdWNrIiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9kMnh1MWhkb21oM25yeC5jbG91ZGZyb250Lm5ldC9kZWZhdWx0X2F2YXRhcnMvVW50aXRsZWQtMV8wMDAxX2JsdWUucG5nIiwidG9rZW4iOiJ5cG1OM0YiLCJyb2xlcyI6W10sImNsaWVudCI6IkFuZHJvaWQvMS4xNS4wIiwiZ3Vlc3RJZCI6bnVsbCwidiI6MSwiaWF0IjoxNTMyNTM0OTc3LCJleHAiOjE1NDAzMTA5NzcsImlzcyI6Imh5cGVxdWl6LzEifQ.vazE_ETZb2EtCB6VQlp940uh6CfWhSjopHE01Irh_6k'}
-UKheaders = {'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwMTg4NzQ5LCJ1c2VybmFtZSI6IkRhYmJpbk9uQm90cyIsImF2YXRhclVybCI6InMzOi8vaHlwZXNwYWNlLXF1aXovZGVmYXVsdF9hdmF0YXJzL1VudGl0bGVkLTFfMDAwM19yZWQucG5nIiwidG9rZW4iOiJ5Smk1eXUiLCJyb2xlcyI6W10sImNsaWVudCI6IiIsImd1ZXN0SWQiOm51bGwsInYiOjEsImlhdCI6MTUzMDkwMjk2NiwiZXhwIjoxNTM4Njc4OTY2LCJpc3MiOiJoeXBlcXVpei8xIn0.X0SsaLWpxdKUvA3f6nREFR8uQvcKB23eFktyAu9ItzM'}
+headers = {'Authorization':'Bearer [insert_au_bearer]'}
+USheaders = {'Authorization':'Bearer [insert_us_bearer]'}
+DEheaders = {'Authorization' : 'Bearer [insert_de_bearer]'}
+UKheaders = {'Authorization' : 'Bearer [insert_uk_bearer]'}
 
 try: #error handling
     @bot.event
@@ -32,7 +32,6 @@ try: #error handling
             
     @bot.command(pass_context=True)
     async def info(ctx, username):
-        headers = {'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIyMDYyNDQ3LCJ1c2VybmFtZSI6Ik9vZmllQVUiLCJhdmF0YXJVcmwiOiJodHRwczovL2QyeHUxaGRvbWgzbnJ4LmNsb3VkZnJvbnQubmV0L2RlZmF1bHRfYXZhdGFycy9VbnRpdGxlZC0xXzAwMDRfZ29sZC5wbmciLCJ0b2tlbiI6IkJwTmlMeSIsInJvbGVzIjpbXSwiY2xpZW50IjoiQW5kcm9pZC8xLjE1LjAiLCJndWVzdElkIjpudWxsLCJ2IjoxLCJpYXQiOjE1MzI2Nzg1MDksImV4cCI6MTU0MDQ1NDUwOSwiaXNzIjoiaHlwZXF1aXovMSJ9.gam_46asERQdW9oLyB92Xi874opyR1vDtLNFVt6Hlk0'}
         search = requests.get('https://api-quiz.hype.space/users?q=' + username, headers = headers)
         searchdata = search.json()
         user = searchdata["data"][0]["userId"]
@@ -187,7 +186,7 @@ try: #error handling
         embed.add_field(name="Bot's ID:", value="449822055634829313", inline=True)
         embed.add_field(name="Servers:", value="{}".format(len(bot.servers)), inline=True)
         embed.add_field(name="Developer:", value="Cruciate#9243", inline=True)
-        embed.add_field(name="Development Assistance:", value="Jacob#2961 & Jsonmarley#9752", inline=True)
+        embed.add_field(name="Development Assistance:", value="Jacob.#4742 & Jsonmarley#9752", inline=True)
         embed.set_thumbnail(url='https://i.imgur.com/D0tzEkz.png')
         await bot.say(embed=embed)
 
@@ -206,9 +205,6 @@ try: #error handling
             prize = data["nextShowPrize"]
             title = data["upcoming"][0]["nextShowLabel"]["title"]
             showtime = datetime.datetime.strptime(time, '%Y-%m-%dT%H:%M:%S.%fZ')
-            # you gotta somehow reformat the time above to the one below - gtg
-            # showtime = str(datetime.datetime.strptime(time, '%I:%M %p'))
-            #back to math we go then?
             showlist = list(str(showtime))
             time = "".join(showlist[11:13])
             minutes = "".join(showlist[13:16])
@@ -344,7 +340,7 @@ try: #error handling
 
     bot.loop.create_task(list_servers())
 
-    bot.run("NDczMDI4MDAyNjI0NTY5MzQ0.Dj861A.qZGjZinhZOwo4xfnNHH4B1iiFyI")
+    bot.run("[insert discord bot token]")
 
 except:
-    pass
+    pass # this stuff here is to loop program if an error occurs, preventing crashing and providing 100% uptime.
